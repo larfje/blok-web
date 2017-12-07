@@ -1,0 +1,53 @@
+body {
+    background-color: white;
+    font-family: "trebuchet ms";
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    color: #606060;
+}
+
+body > * {}
+
+body > header {
+    background-color: white;
+    padding-top: 0;
+    margin-top: none;
+}
+
+main > section {
+    background-color: white;
+    border-radius: .80rem;
+    opacity: 0.75;
+}
+
+h1 {
+    font-size: 2.375rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color: #00d66c;
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-image: url(https://d38kd5vqa6ilbw.cloudfront.net/eu/-/media/Images/Public/Backgrounds/Paris.jpg?h=1666&amp;sc=1&amp;w=4000&amp;useCustomFunctions=1&amp;cropX=0&amp;cropY=1&amp;vs=1&amp;d=20160520T143114Z&amp;hash=D0A3F46F50669134A5F272C61A1CA2342C6DFC28);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /padding: 3em;
+    /margin: auto;
+}
+
+section:last-child {
+    background-color: #f3e5d8;
+}
+
+section > article {
+    display: flex;
+    padding: 3em
+}
