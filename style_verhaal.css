@@ -1,0 +1,111 @@
+body,
+html {
+    height: 100%;
+    width: auto;
+}
+
+body {
+    font-family: "trebuchet ms";
+    display: flex;
+    flex-direction: column;
+    margin: 0em;
+}
+
+body > header {
+    background-color: white;
+    box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+    height: 3em;
+    padding: 0;
+}
+
+
+/* NAVIGATIE */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+nav > form {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: 4em;
+    margin-top: -2.6em;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li img {
+    height: 2em;
+    padding: .5em;
+}
+
+li:nth-of-type(1) {
+    margin-right: auto;
+}
+
+li a {
+    color: #00d66c;
+    text-decoration: none;
+    padding: .25em .5em;
+}
+
+input {
+    border-radius: .5rem;
+    border: .0625rem solid #91a3b7;
+    height: 2em;
+    width: 20em;
+}
+
+div input:nth-of-type(2) {
+    height: 1.75em;
+    width: 1.75em;
+    margin-left: -2.9em;
+    margin-bottom: -.55em;
+    border-radius: 0em;
+    border: none;
+}
+
+
+/* Verhaal */
+
+main {
+    background-image: url(Verhaal_1_Concept1_leeg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #606060;
+}
+
+h2 {
+    font-family: "goudy stout";
+    text-shadow: .2em .2em .4em;
+    font-size: 3em;
+}
+
+p {
+    display: flex;
+    text-shadow: .2em .2em .6em;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 40em
+}

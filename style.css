@@ -1,49 +1,35 @@
-html {
-    font: 100% / 250% "trebuchet ms";
-    padding: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 body {
-    background-color: white;
     font-family: "trebuchet ms";
-    margin: auto;
     display: flex;
     flex-direction: column;
     color: #606060;
-}
-
-input {
-    border-radius: .80rem;
-}
-
-form > div > input:nth-of-type(2) {
-    width: 3.750em;
+    background-color: #f3e5d8;
     margin: 0em;
-    padding: 0em;
 }
-
-input:nth-of-type(3) {
-    background-color: aqua;
-}
-
-body > * {}
 
 body > header {
     background-color: white;
-    box-shadow: 0em 5em .5em 0em black;
+    box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+    height: 3em;
+    padding: 0;
 }
 
+
+/* NAVIGATIE */
+
 nav {
-    padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+}
+
+nav > form {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: 4em;
+    margin-top: -2.6em;
 }
 
 ul {
@@ -54,13 +40,14 @@ ul {
 }
 
 li img {
-    width: 3.750em;
-    margin: 0em;
-    padding: 0em;
+    height: 2em;
+    padding: .5em;
 }
 
 li:nth-of-type(1) {
     margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 li a {
@@ -69,20 +56,78 @@ li a {
     padding: .25em .5em;
 }
 
-nav > form {
-    display: flex;
-    justify-content: center;
+li img:hover {
+    content: url(login_hover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2em;
     position: relative;
-    margin-top: -4em;
+}
+
+img.logotransavia:hover {
+    content: url(transavia-logo_groot_hover.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 2em;
+    position: relative;
+}
+
+input {
+    border-radius: .5rem;
+    border: .0625rem solid #91a3b7;
+    height: 2em;
+    width: 20em;
+    cursor: pointer;
+}
+
+input:hover {
+    border-color: #2800a0;
+}
+
+div input:nth-of-type(2) {
+    height: 1.75em;
+    width: 1.75em;
+    margin-left: -2.9em;
+    margin-bottom: -.55em;
+    border-radius: 0em;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Main */
+
+main {
+    background-image: url(Vrouwmetboek.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
+    height: 35em;
 }
 
 main > section {
     border-radius: .80rem;
     text-align: center;
-    margin-left: 2em;
-    margin-right: 2em;
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
     margin-bottom: 2em;
     background-color: rgba(255, 255, 255, 0.9);
+}
+
+main section a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 2em;
+    justify-content: center;
+    border-radius: .625em;
+}
+
+main > section:last-of-type {
+    background-color: #2800a0;
+    justify-content: center;
 }
 
 h1 {
@@ -92,25 +137,213 @@ h1 {
     color: #00d66c;
     background-color: rgba(255, 255, 255, 1.0);
     border-radius: .80rem .80rem 0rem 0rem;
+    padding: 16px 16px 16px 16px;
 }
 
-main {
-    background-image: url(Vrouwmetboek.png);
+input:nth-of-type(3) {
+    background-color: #ff3268;
+    box-shadow: inset 0 -0.1875em 0.0625em #ca2b55;
+    color: #fff!important;
+    border: 0em;
+    font-weight: bold;
+    line-height: 1.5;
+    border-radius: 1.25em;
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5em;
+    margin-bottom: -1.2em;
+    position: relative;
+}
+
+input:nth-of-type(3):hover {
+    background-color: #ff658e;
+    transition: background-color .4s ease-in;
+}
+
+main footer {
+    background-color: white;
+    border-radius: 0em 0em .8em 0.8em;
+    display: flex;
+    justify-content: center;
+    height: 4em
+}
+
+
+/* articles */
+
+body > section {
+    display: grid;
+    grid-template-columns: 33% 33%;
+    grid-gap: 2em;
+    margin-left: -3em;
+    margin-right: -3em;
+    justify-content: center;
+}
+
+article {
+    background-image: url(Verhaal_1_Concept1_small.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: .625em;
+    height: 12em;
+}
+
+article:first-of-type {
+    background-image: url(Verhaal_2_Concept2_small.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-body > section {
-    display: grid;
-    grid-template-columns: 20% 20% 20%;
+article:nth-of-type(2) {
+    background-image: url(Verhaal_3_Concept1_small.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-section > article {
-    padding: 3em flex-direction: column;
+article:last-of-type {
+    visibility: hidden;
+    position: absolute;
 }
 
-article {
-    background-color: aquamarine;
-    border: 10px;
-    border-color: darkgrey;
+article img {
+    width: 2em;
+    display: flex;
+    margin-left: auto;
+    margin-top: -2.3em;
+    margin-right: .5em;
+}
+
+article img:hover {
+    content: url(heart_liked.png);
+}
+
+footer a {
+    text-decoration: none;
+    background-color: #00d66c;
+    color: white;
+    font-weight: bold;
+    border-radius: 1.25em;
+    line-height: 1.5;
+    padding: .5em;
+    width: 7em;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6em;
+    box-shadow: inset 0 -0.1875em 0.0625em #1e9262;
+    color: #fff!important;
+    border: 0;
+}
+
+footer a:hover {
+    background-color: #4de298;
+    transition: background-color .4s ease-in;
+}
+
+H2 {
+    font-size: 2.375rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color: #2800a0;
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    background-color: white;
+    padding: 1em;
+}
+
+H3 {
+    background-color: white;
+    height: 2em;
+    border-radius: .5em .5em 0em 0em;
+    margin: 0em;
+    padding: .5em 0em 0em 2em;
+}
+
+body > footer {
+    display: flex;
+    background-color: white;
+    margin: 0;
+    margin-top: 1em;
+    padding: 0;
+    height: 5em;
+    justify-content: center;
+}
+
+body > footer > H3 {
+    display: flex;
+    margin-top: 1em;
+}
+
+
+/* voor mobiel */
+
+@media (max-width:45em) {
+    main >section {
+        width: auto;
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+    main > section:last-of-type {
+        height: 0em;
+        color: white;
+        margin-top: -4em
+    }
+    main > section a {
+        color: #2800a0;
+        padding: inherit;
+        font-size: .7em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    body > section {
+        display: grid;
+        grid-template-columns: 60%;
+    }
+    article:last-of-type {
+        visibility: visible;
+        position: inherit;
+    }
+    input {
+        width: auto;
+    }
+    nav input:first-of-type {
+        visibility: hidden;
+    }
+}
+
+
+/* computer */
+
+@media (min-width:78em) {
+    main > section:last-of-type {
+        background-color: #2800a0;
+        width: 20em;
+        justify-content: center;
+        position: relative;
+        margin-top: -29.9em;
+        margin-right: 6em;
+        margin-left: auto;
+    }
+    body > section {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-gap: 2em;
+        margin-left: 4em;
+        margin-right: 4em;
+        justify-content: center;
+    }
+    article {
+        background-image: url(Verhaal_1_Concept1_small.png);
+    }
+    article:last-of-type {
+        visibility: visible;
+        position: inherit;
+    }
 }
