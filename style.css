@@ -260,7 +260,6 @@ H2 {
     display: flex;
     justify-content: center;
     margin-top: 1em;
-    background-color: white;
     padding: 1em;
 }
 
@@ -326,6 +325,10 @@ body > footer > H3 {
     }
     nav input:first-of-type {
         visibility: hidden;
+    }
+    article {
+        margin-left: -2em;
+        margin-right: -2em;
     }
 }
 

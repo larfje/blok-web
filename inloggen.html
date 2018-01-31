@@ -6,6 +6,7 @@
     <title>Verhavia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_Inloggen.css">
+
 </head>
 
 <body>
@@ -29,24 +30,42 @@
     </header>
     <main>
         <section>
-            <H2>Log in bij Mijn Verhavia</H2>
+
             <form>
-                <p>Inloggen:</p>
-                <input type="text" name="vul uw inlognaam in" placeholder="Inlognaam">
-                <p>Wachtwoord:</p>
-                <input type=" text" name="Vul uw wachtwoord in " placeholder="Wachtwoord">
-                <input type="submit" value="Log-in ">
+                <legend>
+                    <H2>Log in bij Mijn Verhavia</H2>
+                </legend>
+                <fieldset>
+                    <label for="naam">
+                        <p>Inlognaam:</p>
+                    </label>
+                    <input type="text" name="vul uw inlognaam in" placeholder="Inlognaam" required>
+                    <label for="achternaam">
+                        <p>Wachtwoord:</p>
+                    </label>
+                    <input type="password" name="Vul uw wachtwoord in" placeholder="Wachtwoord" required>
+                    <input type="submit" value="Log-in ">
+                </fieldset>
             </form>
             <footer><a href="inloggen.html ">> Registreren</a></footer>
         </section>
         <section>
-            <H2>Geen account</H2>
+
             <form>
-                <p>Boekingsnummer:</p>
-                <input type="text" name="vul uw boekingsnummer in" placeholder="b.v. BRN123">
-                <p>Achernaam:</p>
-                <input type="text" name="Vul uw achternaam in" placeholder="b.v. Jansen">
-                <input type="submit" value="Bekijk verhalen ">
+                <legend>
+                    <H2>Geen account</H2>
+                </legend>
+                <fieldset>
+                    <label for="boekingsnummer">
+                        <p>Boekingsnummer:</p>
+                    </label>
+                    <input type="text" name="vul uw boekingsnummer in" placeholder="b.v. BRN123" required>
+                    <label for="achternaam">
+                        <p>Achernaam:</p>
+                    </label>
+                    <input type="text" name="Vul uw achternaam in" placeholder="b.v. Jansen" required>
+                    <input type="submit" value="Bekijk verhalen ">
+                </fieldset>
             </form>
         </section>
     </main>

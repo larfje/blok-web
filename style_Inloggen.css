@@ -97,6 +97,14 @@ div input:nth-of-type(2) {
     cursor: pointer;
 }
 
+fieldset {
+    border: none;
+}
+
+input:focus {
+    transform: scale(1.01, 1.01);
+}
+
 
 /* Main */
 
