@@ -6,9 +6,11 @@
     <title>Verhavia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
     <header>
         <nav>
             <ul>
@@ -16,7 +18,8 @@
                     <a href="index.html"><img src="transavia-logo_groot.png" alt="Transavia Logo" class="logotransavia"></a>
                 </li>
                 <li>
-                    <a href="inloggen.html"><img src="login.png" alt="Inloggen"></a>
+                    <button class="rondje"></button>
+                    <a href="inloggen.html"><img src="login.png" alt="Inloggen" style="z-index: 1001;"></a>
                 </li>
             </ul>
             <form>
@@ -28,45 +31,61 @@
         </nav>
     </header>
 
-    <main>
+    <main class="homepage">
         <section>
             <h1>Vind hier de beste verhalenbundel voor jou!</h1>
             <form>
                 <p>Vul jouw boekingsnummer in:</p>
-                <input type="text" name="vul uw vliegticket in" placeholder="b.v. BRN123">
+                <input type="text" pattern="[A-Z]{3}[0-9]{3}" maxLength="6" name="vul jouw boekingsnummer in" placeholder="b.v. BRN123" required="" id="boekingsnummer">
                 <p>Vul jouw achternaam in:</p>
-                <input type="text" name="Vul jou achternaam in" placeholder="b.v. Jansen">
+                <input required type="text" name="Vul jouw achternaam in" placeholder="b.v. Jansen">
                 <input type="submit" value="Stel jouw verhalenbundel samen">
             </form>
             <footer></footer>
         </section>
-        <section><a href="*">Bekijk alle 99 verhalen ></a></section>
+        <section><a href="">Bekijk alle 99 verhalen ></a></section>
     </main>
 
     <H2>Losse verhalen</H2>
-    <section>
+    <section class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Filters</button>
+        <div id="myDropdown" class="dropdown-content">
+            <p>- EMOTIE -</p>
+            <label> Angstig</label>
+            <label> Boos</label>
+            <label> Verdrietig</label>
+            <label> Vrolijk</label>
+            <p>- SFEER -</p>
+            <label> Dramatisch</label>
+            <label> Inspirerend</label>
+            <label> Mysterieus</label>
+        </div>
+    </section>
 
-        <article>
+    <section class="verhalen">
+
+        <article tag="inspirerend, dramatisch, vrolijk">
             <header>
                 <h3>Ongeboren (40)</h3>
-                <a href="*"><img src="heart.png" alt="liken"></a>
+                <button class="liking">like</button>
             </header>
-            <footer><a href="---">Lees meer!</a></footer>
+            <footer><a href="verhaal1.html">Lees meer!</a></footer>
         </article>
-        <article>
+        <article tag="angstig, boos, mysterieus">
             <header>
                 <h3>Alzheimer (28)</h3>
-                <a href="*"><img src="heart.png" alt="liken"></a>
-            </header>
-            <footer> <a href="---">Lees meer!</a> </footer>
-        </article>
-        <article>
-            <header>
-                <h3>De passie van Max (58)</h3>
-                <a href="*"><img src="heart.png" alt="liken"></a>
+                <button class="liking">like</button>
             </header>
             <footer> <a href="verhaal1.html">Lees meer!</a> </footer>
         </article>
+        <article tag="mysterieus, inspirerend, boos">
+            <header>
+                <h3>De passie van Max (58)</h3>
+                <button class="liking">like</button>
+            </header>
+
+        </article>
+
     </section>
 
     <h2>Verhalenbundels</h2>
@@ -76,28 +95,29 @@
         <article>
             <header>
                 <h3>Ongeboren (40)</h3>
-                <a href="*"><img src="heart.png" alt="liken"></a>
+                <button>like</button>
             </header>
-            <footer> <a href="---">Lees meer!</a></footer>
+            <footer> <a href="verhaal1.html">Lees meer!</a></footer>
         </article>
         <article>
             <header>
                 <h3>Alzheimer (28)</h3>
-                <a href="*"><img src="heart.png" alt="liken"></a>
+                <button>like</button>
             </header>
             <footer> <a href="verhaal1.html">Lees meer!</a> </footer>
         </article>
         <article>
             <header>
                 <h3>De passie van Max (58)</h3>
-                <a href="*"><img src="heart.png" alt="liken"></a>
+                <button>like</button>
             </header>
             <footer> <a href="verhaal1.html">Lees meer!</a> </footer>
         </article>
     </section>
     <footer>
-        <H3>@Larissa Nieuwenhuizen</H3>
+        <h3>@Larissa Nieuwenhuizen</h3>
     </footer>
+    <script src="javascript.js"></script>
 </body>
 
 </html>

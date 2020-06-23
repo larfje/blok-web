@@ -10,10 +10,12 @@ body {
 body > header {
     background-color: white;
     box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
-    height: 3em;
-    padding: 0;
+    height: 4em;
+    padding: 0em;
+    padding-top: 1em;
     position: fixed;
-    width: 100%
+    width: 100%;
+    z-index: 666;
 }
 
 
@@ -42,7 +44,7 @@ ul {
 
 li img {
     height: 2em;
-    padding: .5em;
+    padding: .3em;
 }
 
 li:nth-of-type(1) {
@@ -89,11 +91,38 @@ input:hover {
 div input:nth-of-type(2) {
     height: 1.75em;
     width: 1.75em;
-    margin-left: -3.1em;
     margin-bottom: -.55em;
     border-radius: 0em;
     border: none;
     cursor: pointer;
+}
+
+
+/* Form homepagina */
+
+section > form > input:valid {
+    border: 2px solid #4de298;
+}
+
+section > form > input:valid:nth-of-type(3) {
+    border: 2px solid;
+}
+
+section > form > input[type=text]:focus {
+    background-color: #b5b5b5;
+}
+
+section > form > input[type=text]:valid:focus {
+    background-color: lightgreen;
+}
+
+section > form > input[type=text]:invalid:focus {
+    background-color: lightcoral;
+    border: 2px solid lightcoral;
+}
+
+::placeholder {
+    color: lightgrey;
 }
 
 
@@ -105,6 +134,7 @@ main {
     background-size: cover;
     box-shadow: inset 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
     height: 39em;
+    margin-top: 5em;
 }
 
 main > section {
@@ -118,18 +148,15 @@ main > section {
     background-color: rgba(255, 255, 255, 0.9);
 }
 
-main section a {
+main > section > a {
     color: white;
     text-decoration: none;
     display: flex;
     padding: 2em;
     justify-content: center;
     border-radius: .625em;
-}
-
-main > section:last-of-type {
+    margin-top: 2em;
     background-color: #2800a0;
-    justify-content: center;
 }
 
 main >section:hover:last-of-type {
@@ -176,7 +203,77 @@ main footer {
     border-radius: 0em 0em .8em 0.8em;
     display: flex;
     justify-content: center;
-    height: 4em
+    height: 4em;
+}
+
+
+/*filter*/
+
+
+/* Dropdown Button */
+
+.dropbtn {
+    display: flex;
+    margin-bottom: 3em;
+    background-color: #ff3268;
+    color: white;
+    text-decoration: none;
+    padding: 1em 4.5em;
+    font-weight: 600;
+    justify-content: center;
+    border-radius: .625em .625em 0 0;
+    cursor: pointer;
+    border-style: none;
+    min-width: 300px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #ff658e;
+    transition: background-color .4s ease-in;
+}
+
+.dropdown {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 2.6em;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 666;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.dropdown-content > label {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.dropdown-content > label:hover {
+    cursor: pointer;
+    background-color: #4de298;
+    transition: background-color .4s ease-in;
+    color: white;
+}
+
+
+/* Show de dropdown menu */
+
+.show {
+    display: flex;
+}
+
+.geselecteerd {
+    background-color: #ff3268;
+    color: white;
 }
 
 
@@ -196,7 +293,30 @@ article {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: .625em;
-    height: 12em;
+    height: 15em;
+}
+
+article header {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: .8em;
+    border-radius: .5em .5em 0 0;
+}
+
+article header button {
+    width: 3em;
+    height: 2.4em;
+    border: none;
+    background-image: url(heart.png);
+    background-size: cover;
+    text-indent: -666em;
+    background-color: transparent;
+}
+
+article header button:hover {
+    transform: scale(1.25);
+    transition: .25s 0s;
 }
 
 article:first-of-type {
@@ -214,18 +334,6 @@ article:nth-of-type(2) {
 article:last-of-type {
     visibility: hidden;
     position: absolute;
-}
-
-article img {
-    width: 2em;
-    display: flex;
-    margin-left: auto;
-    margin-top: -2.3em;
-    margin-right: .5em;
-}
-
-article img:hover {
-    content: url(heart_liked.png);
 }
 
 footer a {
@@ -266,10 +374,8 @@ H2 {
 
 H3 {
     background-color: white;
-    height: 2em;
-    border-radius: .5em .5em 0em 0em;
-    margin: 0em;
-    padding: .5em 0em 0em 2em;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 body > footer {
@@ -288,12 +394,32 @@ body > footer > H3 {
 }
 
 
+/* verhaal */
+
+.verhaal {
+    background-color: white;
+}
+
+.verhaal main {
+    background-image: url(VerhaalAlzheimerTablet.png);
+    background-size: cover;
+    background-color: none;
+    height: 200em;
+}
+
+
 /* voor mobiel */
 
 @media (max-width:45em) {
+    nav {
+        margin-right: 10%;
+    }
     main {
         height: 33em;
         width: 100%;
+    }
+    .verhaal main {
+        background-image: url(VerhaalAlzheimerMobile.png);
     }
     main >section {
         width: auto;
@@ -309,6 +435,7 @@ body > footer > H3 {
         color: #2800a0;
         padding: inherit;
         font-size: .7em;
+        background-color: white;
     }
     h1 {
         font-size: 2em;
@@ -331,6 +458,13 @@ body > footer > H3 {
         margin-left: -2em;
         margin-right: -2em;
     }
+    .dropdown {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .dropdown-content {
+        min-width: 100%;
+    }
 }
 
 
@@ -338,8 +472,14 @@ body > footer > H3 {
 
 @media (min-width:78em) {
     main {
-        height: 33em;
         width: 100%;
+    }
+    .verhaal main {
+        background-image: url(VerhaalAlzheimer.png);
+        height: 70em;
+    }
+    .homepage main {
+        height: 33em;
     }
     main > section:last-of-type {
         background-color: #2800a0;
@@ -365,4 +505,28 @@ body > footer > H3 {
         visibility: visible;
         position: inherit;
     }
+    .dropdown {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+body.like article header button:first-of-type {
+    background-image: url(heart_liked.png);
+}
+
+.rondje {
+    position: absolute;
+    z-index: 1005;
+    padding: .5em;
+    border-radius: 100%;
+    border-style: solid;
+    background-color: #ff3268;
+    border-color: transparent;
+    display: none;
+    margin-left: 2.5em;
+}
+
+.laatzien {
+    background-color: aqua;
 }

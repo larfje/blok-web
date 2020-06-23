@@ -11,8 +11,12 @@ body {
 body > header {
     background-color: white;
     box-shadow: 0 0.3125em 0.625em 0 rgba(0, 0, 0, .15);
-    height: 3em;
-    padding: 0;
+    height: 4em;
+    padding: 0em;
+    padding-top: 1em;
+    position: fixed;
+    width: 100%;
+    z-index: 666;
 }
 
 
@@ -42,7 +46,7 @@ ul {
 
 li img {
     height: 2em;
-    padding: .5em;
+    padding: .3em;
 }
 
 li:nth-of-type(1) {
@@ -90,7 +94,6 @@ input:hover {
 div input:nth-of-type(2) {
     height: 1.75em;
     width: 1.75em;
-    margin-left: -3.1em;
     margin-bottom: -.55em;
     border-radius: 0em;
     border: none;
@@ -112,9 +115,8 @@ main {
     display: flex;
     width: 35em;
     justify-content: center;
-    margin: 0em;
     padding: 0em;
-    margin-top: 1em;
+    margin-top: 5em;
     flex-direction: column;
     border-radius: .5em;
     margin-left: auto;
@@ -194,7 +196,6 @@ main footer {
 }
 
 footer a {
-    margin: auto;
     text-decoration: none;
     color: #2800a0;
 }
@@ -243,7 +244,7 @@ body > footer > H3 {
         justify-content: center;
         width: 50em;
         background-color: white;
-        margin-top: 2em;
+        margin-top: 7em;
     }
     section {
         margin: 0em;
